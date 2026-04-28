@@ -43,7 +43,7 @@ const ProfilePage = ({ data, payment = [] }) => {
       setLoading(true);
 
       const res = await axios.patch(
-        "http:https://school-dary.onrender.com/api/user-info/update/",
+        "https://school-dary.onrender.com/api/user-info/update/",
         formData,
         {
           headers: {
