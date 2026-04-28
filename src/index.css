@@ -1,0 +1,464 @@
+/* App.css */
+
+/* Общий контейнер */
+div {
+  font-family: "Inter", sans-serif;
+}
+
+/* Заголовок */
+h1 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #222;
+}
+
+/* Сетка карточек */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Карточка */
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transition: all 0.25s ease;
+  border: 1px solid #f1f1f1;
+}
+
+/* Hover эффект */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовки карточек */
+.card h2 {
+  margin-bottom: 12px;
+  font-size: 18px;
+  color: #444;
+}
+
+/* Текст */
+.card p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Цветовые акценты */
+.card:nth-child(1) {
+  border-left: 5px solid #4caf50;
+}
+
+.card:nth-child(2) {
+  border-left: 5px solid #2196f3;
+}
+
+.card:nth-child(3) {
+  border-left: 5px solid #ff9800;
+}
+
+.card:nth-child(4) {
+  border-left: 5px solid #9c27b0;
+}
+
+/* Адаптив */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+}
+
+/* Контейнер navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Заголовок */
+.navbar h3 {
+  font-size: 18px;
+  color: #333;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Кнопка выхода */
+.navbar button {
+  background: #ff4d4f;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+/* Hover эффект */
+.navbar button:hover {
+  background: #e53935;
+  transform: translateY(-1px);
+}
+
+/* Нажатие */
+.navbar button:active {
+  transform: scale(0.97);
+}
+
+/* Адаптив */
+@media (max-width: 600px) {
+  .navbar {
+    padding: 12px 16px;
+  }
+
+  .navbar h3 {
+    font-size: 16px;
+  }
+
+  .navbar button {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}
+
+.card {
+  padding: 20px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  margin-bottom: 15px;
+  color: #273da4;
+}
+
+.lesson-list {
+  display: grid;
+  gap: 10px;
+}
+
+.lesson-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-radius: 10px;
+  background: #fafafa;
+  transition: 0.2s;
+}
+
+.lesson-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.lesson-subject {
+  margin: 0;
+  font-size: 16px;
+}
+
+.lesson-text {
+  margin: 4px 0;
+  color: #555;
+  font-size: 14px;
+}
+
+.lesson-right {
+  text-align: right;
+}
+
+.lesson-time {
+  font-weight: bold;
+  margin: 0;
+}
+
+.lesson-class {
+  color: #ff6900;
+  margin: 0;
+}
+
+.empty {
+  text-align: center;
+  color: #999;
+  margin-top: 10px;
+}
+
+.attendance-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f5f7fb;
+  min-height: 100vh;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.attendance-table th,
+.attendance-table td {
+  padding: 12px;
+  text-align: center;
+}
+
+.attendance-table th {
+  background-color: #4a90e2;
+  color: white;
+  font-weight: bold;
+}
+
+.attendance-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.attendance-table tr:hover {
+  background-color: #e6f0ff;
+  transition: 0.3s;
+}
+
+/* Status styles */
+.status {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.present {
+  background-color: #d4edda;
+  color: #2e7d32;
+}
+
+.absent {
+  background-color: #f8d7da;
+  color: #c62828;
+}
+
+/* Общий контейнер */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 14px 28px;
+
+  backdrop-filter: blur(12px);
+  background: rgba(79, 70, 229, 0.75);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+  color: white;
+}
+
+/* Левая часть */
+.navbar__left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar__logo {
+  font-size: 22px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.navbar__title {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+/* Кнопка */
+.navbar__btn {
+  position: relative;
+
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+
+  padding: 8px 18px;
+  font-size: 14px;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(6px);
+  transition: all 0.25s ease;
+}
+
+/* Эффекты */
+.navbar__btn:hover {
+  background: white;
+  color: #4f46e5;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.navbar__btn:active {
+  transform: scale(0.96);
+}
+
+/* Анимация логотипа */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Адаптив */
+@media (max-width: 600px) {
+  .navbar {
+    padding: 12px 16px;
+  }
+
+  .navbar__title {
+    font-size: 15px;
+  }
+
+  .navbar__btn {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}
+
+/* Общий контейнер */
+.auth-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #4f46e5, #9333ea);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Карточка формы */
+.auth-card {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 380px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  animation: fadeIn 0.4s ease;
+}
+
+/* Заголовок */
+.auth-card h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Ошибка */
+.error {
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Инпуты */
+.auth-card input {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  transition: 0.2s ease;
+  outline: none;
+}
+
+.auth-card input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+/* Кнопка */
+.auth-card button {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #4f46e5;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.auth-card button:hover {
+  background: #4338ca;
+}
+
+.auth-card button:disabled {
+  background: #a5b4fc;
+  cursor: not-allowed;
+}
+
+/* Текст снизу */
+.auth-card p {
+  text-align: center;
+  font-size: 14px;
+}
+
+.auth-card a {
+  color: #4f46e5;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-card a:hover {
+  text-decoration: underline;
+}
+
+/* Анимация */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
